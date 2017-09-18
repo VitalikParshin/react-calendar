@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.calendar {
+  width: 80%;
+  border: 1px solid gray;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.calendar-header-cell {
+  border-left: 1px solid gray;
+  text-align: left;
+  padding: 10px 5px;
+}
+
+.calendar-day {
+  height: 70px;
+}
+
+.calendar-title-day {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid lightgray;
+  padding: 0 5px;
+}
+
+.calendar-select-day {
+  width: 40px;
+  background: lightgray;
+}
+
+.day-item {
+  width: 30px;
+  border: 1px solid lightgray;
+}
