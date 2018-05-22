@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import DayItem from "./DayItem.jsx";
 import { connect } from "react-redux";
+import CircleIcon from "../../assets/circle.svg";
+import CircleCheckedIcon from '../../assets/circle-checked.svg';
 
 import { ACTION_CLEAR_DAY, ACTION_SELECT_DAY } from "../reducers/calendar.js";
 
@@ -48,26 +50,11 @@ class Day extends Component {
 
     return (
       <tr className="calendar-day">
-        <td
-          className="calendar-title-day"
-          style={{ background: this.state.checkDay ? "gray" : "white" }}
-        >
+        <td className="calendar-title-day" style={{ background: this.state.checkDay ? 'gray' : 'white' }}>
           {DAYS_MAP[day]}
         </td>
         <td className="calendar-select-day" onClick={this.selectDay}>
-          {this.state.checkDay ? (
-            <img
-              alt="check-icon"
-              src="http://www.iconsdb.com/icons/preview/gray/ok-xxl.png"
-              width="30px"
-            />
-          ) : (
-            <img
-              alt="circle"
-              src="http://media-s3-us-east-1.ceros.com/orange-tap/images/2017/05/04/2f00558d82b1c2c36d7a64951e162c90/circle-gray.png"
-              width="30px"
-            />
-          )}
+        { this.state.checkDay ? <CircleIcon width={45} height={45} /> : <CircleCheckedIcon width={45} height={45} />}
         </td>
         {minutesRange.map((minute, index) => (
           <DayItem
@@ -78,7 +65,7 @@ class Day extends Component {
           />
         ))}
       </tr>
-    );
+      );
   }
 }
 

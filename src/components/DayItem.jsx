@@ -40,16 +40,12 @@ class DayItem extends Component {
   };
 
   handleMouseUp = () => {
-    const { selectedRange } = this.props;
-
-    Promise.resolve(
-      this.props.dispatch({
-        type: ACTION_SAVE_SELECTED_RANGE,
-        selectedRange: selectedRange
-      })
-    ).then(response => {
-      this.props.dispatch({ type: ACTION_CLEAR_SELECTED_RANGE });
-    });
+    const { selectedRange, dispatch } = this.props;
+    dispatch({
+      type: ACTION_SAVE_SELECTED_RANGE,
+      selectedRange: selectedRange
+    })
+    dispatch({ type: ACTION_CLEAR_SELECTED_RANGE });
   };
 
   inSelectedRange = () => {

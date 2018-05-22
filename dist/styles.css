@@ -20,6 +20,7 @@
 }
 
 .calendar-title-day {
+  width: 60px;
   font-size: 20px;
   font-weight: bold;
   border: 1px solid lightgray;
@@ -29,6 +30,7 @@
 .calendar-select-day {
   width: 40px;
   background: lightgray;
+  cursor: pointer;
 }
 
 .day-item {
